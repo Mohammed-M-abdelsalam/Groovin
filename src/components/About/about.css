@@ -1,0 +1,10 @@
+.with-before-bg::before {
+  content: '';
+  background-image: url('../../assets/images/about-bg.png');
+  position: absolute;
+  inset: 0;
+  bottom: 30%;
+  right: 30%;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
