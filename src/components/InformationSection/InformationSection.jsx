@@ -14,7 +14,7 @@ function InformationSection(){
                     {
                         arr.map((item, index) => (
                             <div key={index} className="w-1/1 sm:w-1/2 md:w-1/4 p-5">
-                                <div className="mx-auto w-fit">
+                                <div className="mx-auto w-50">
                                     <h2 className="text-5xl font-bold">
                                         <CountUp end={item.number} duration={0.8} separator="," enableScrollSpy scrollSpyOnce />
                                     </h2>

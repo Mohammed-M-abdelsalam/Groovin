@@ -7,18 +7,18 @@ function About(){
     const [index, setIndex] = useState(0)
     const refs = useRef([]);
     useAnimation(refs.current, {
-        duration: 1, 
+        duration: 1,
         y: 0, 
         opacity: 1, 
-        stagger: 0.5,
+        stagger: 1,
         scrollTrigger: {
             trigger: refs.current,
-            scrub: true
+            scrub: true,
         }
     })
     return(
         <section id='about' className='container-style mx-auto text-center py-10'>
-            <div ref={el => refs.current[0] = el} className='mb-15 opacity-0 translate-y-20'>
+            <div ref={el => refs.current[0] = el} className='mb-15 opacity-0 translate-y-50'>
                 <h1 className='text-2xl font-bold'>About</h1>
                 <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
             </div>

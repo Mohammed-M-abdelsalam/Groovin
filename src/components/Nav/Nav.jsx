@@ -44,7 +44,7 @@ function Nav(){
                         <a href="#about" onClick={()=>setActive('about')} className={`block py-2 px-3 rounded-sm ${active === 'about' ? 'text-main' : 'hover:text-main'} md:border-0 md:hover:text-main md:p-0`}>About</a>
                     </li>
                     <li>
-                        <a href="#" onClick={()=>setActive('services')} className={`block py-2 px-3 rounded-sm ${active === 'services' ? 'text-main' : 'hover:text-main'} md:border-0 md:hover:text-main md:p-0`}>Services</a>
+                        <a href="#services" onClick={()=>setActive('services')} className={`block py-2 px-3 rounded-sm ${active === 'services' ? 'text-main' : 'hover:text-main'} md:border-0 md:hover:text-main md:p-0`}>Services</a>
                     </li>
                     <li>
                         <a href="#" onClick={()=>setActive('pricing')} className={`block py-2 px-3 rounded-sm ${active === 'pricing' ? 'text-main' : 'hover:text-main'} md:border-0 md:hover:text-main md:p-0`}>Pricing</a>
