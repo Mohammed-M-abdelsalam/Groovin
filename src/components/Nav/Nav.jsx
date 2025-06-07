@@ -1,20 +1,27 @@
 import { useEffect, useState } from "react";
 
 function Nav(){
-    const [active, setActive] = useState('home');
-    useEffect(() => {
-        const handleScroll = () => {
-            if(window.scrollY > 100){
-                document.querySelector('nav').classList.remove('opacity-50');
-            }else{
-                document.querySelector('nav').classList.add('opacity-50');
-            }
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    })
+  const [active, setActive] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const nav = document.querySelector("nav");
+      if (window.scrollY > 100) {
+        nav?.classList.remove("opacity-50");
+      } else {
+        nav?.classList.add("opacity-50");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    import("flowbite").then(() => {});
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
     return(
         <nav className="bg-black opacity-50 transition-opacity duration-500 h-[75px] fixed right-0 left-0 top-0 z-50">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -45,7 +52,7 @@ function Nav(){
                         <a href="#" onClick={()=>setActive('pricing')} className={`block py-2 px-3 rounded-sm ${active === 'pricing' ? 'text-main' : 'hover:text-main'} md:border-0 md:hover:text-main md:p-0`}>Pricing</a>
                     </li>
                     <li>
-                        <a href="#" onClick={()=>setActive} className={`block py-2 px-3 rounded-sm ${active === 'contact' ? 'text-main' : 'hover:text-main'} md:border-0 md:hover:text-main md:p-0`}>Contact</a>
+                        <a href="#" onClick={()=>setActive('contact')} className={`block py-2 px-3 rounded-sm ${active === 'contact' ? 'text-main' : 'hover:text-main'} md:border-0 md:hover:text-main md:p-0`}>Contact</a>
                     </li>
                 </ul>
             </div>
