@@ -1,9 +1,20 @@
-content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}"
-],
+// tailwind.config.js
 
-plugins: [
-    require('flowbite/plugin')
-]
+import flowbitePlugin from 'flowbite/plugin'; // <-- Change this line
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './node_modules/flowbite/**/*.js',
+    // If you are using flowbite-react components, also add this line:
+    './node_modules/flowbite-react/lib/**/*.js',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    flowbitePlugin,
+  ],
+};
